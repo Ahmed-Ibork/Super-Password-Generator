@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    word-spacing: -3px;
+    letter-spacing: -0.3px;
+}
+:root {
+    --master-color: #2196f3;
+    --super-master-color: #1787e0;
+}
+.container {
+    width: 600px;
+    background-color: white;
+    margin: 200px auto 0;
+    box-shadow: 4px 4px 25px 0 rgba( 0 0 0 / 15%);
+    padding: 15px;
+}
+.container h1 {
+    font-size: 21px;
+    border: 3px solid #e9e6e6;
+    border-radius: 6px;
+    padding: 12px;
+    width: fit-content;
+    margin: 0 auto 15px;
+    color: white;
+    background-color: #0000ff70;
+}
+.container .Password {
+    border: 2px solid #e9e6e6;
+    padding: 6px 14px;
+    background-color: #eeeeee36;
+    font-weight: bold;
+    font-size: 14px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 14px 0 rgba( 0 0 0 / 10%);
+}
+.container .Password .password {
+    width: 90%;
+    border-right: 2px solid #e9e6e6;
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.container .Password .copy {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.container .Password .copy i {
+    font-size: 18px;
+    color: #777;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.container .Password .copy i:hover {
+    color: var(--super-master-color);
+}
+.container .Password .copy i.Super {
+    transition: 0.2s;
+    transform: scale(1.2);
+    color: var(--master-color);
+}
+.container .control {
+    border: 2px solid #eee;
+    margin-top: 7px;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 13.3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .control label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.container .control label input {
+    appearance: none;
+    position: absolute;
+}
+.container .control label span {
+    margin-left: 20px;
+}
+.container .control label span::after {
+    content: '';
+    position: absolute;
+    outline: 2px solid var(--master-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    border: 3px solid white;
+    cursor: pointer;
+    left: 0;
+}
+.container .control label input:checked + span::after {
+    background-color: var(--super-master-color);
+}
+.container .control label input:checked + span {
+    color: var(--super-master-color);
+}
+.container .control .password-length {
+    border-left: 2px solid #e9e6e6;
+    padding-left: 20px;
+    font-size: 13.8px;
+}
+.container .control .password-length input {
+    border: 2px solid #e9e6e6;
+    outline: none;
+    background-color: #eee6;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+    width: 53px;
+    color: var(--super-master-color);
+    font-size: 15px;
+    transition: 0.4s ease;
+}
+.container .control .password-length input:focus {
+    border: 2px solid var(--super-master-color);
+    width: 56px;
+}
